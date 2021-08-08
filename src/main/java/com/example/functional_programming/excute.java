@@ -49,5 +49,33 @@ public class excute {
         for(TravleInfo travleInfo : searchTravel) {
             System.out.println(travleInfo);
         }
+
+        // 국가명을 기준으로 조회하는 예제
+        List<TravleInfo> searchListByCountry = travelSearch.searchTravelInfo(travelInfo -> {
+            if(travelInfo.getCountry().equals("vietnam")) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+        for(TravleInfo travleInfo : searchListByCountry) {
+            System.out.println(travleInfo);
+        }
+
+        // 도시명을 기준으로 조회하는 예제
+        List<TravleInfo> searchListByCity = travelSearch.searchTravelInfo(travelInfo -> {
+            if(travelInfo.getCity().equals("hanoi")) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+        for(TravleInfo travleInfo : searchListByCity) {
+            System.out.println(travleInfo);
+        }
+
+
     }
 }
