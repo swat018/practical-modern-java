@@ -10,6 +10,8 @@ public class KoreaHouseAddress implements HouseAddress{
         this.postCode = postCode;
         this.address = address;
         this.detailAddress = detailAddress;
+
+        System.out.println(postCode + " " + address + " " + detailAddress);
     }
 
     @Override
@@ -24,6 +26,11 @@ public class KoreaHouseAddress implements HouseAddress{
 
     @Override
     public String getDetailAddress() {
-        return detailAddress;
+        return getCountryCode();
+    }
+
+    @Override
+    public String getCountryCode() {
+        return HouseAddress.super.getCountryCode(); // 자바 8에 추가된 기능
     }
 }

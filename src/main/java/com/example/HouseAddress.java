@@ -14,6 +14,11 @@ public interface HouseAddress {
 
     // 국가 코드를 리턴한다.
     default public String getCountryCode() {
+        return getDefaultCountry();
+    }
+
+    // 기본 국가 코드를 리턴한다. 자바 9 이상에서 컴파일된다.
+    private String getDefaultCountry() {
         return HouseAddress.DefaultCountry;
     }
 }
