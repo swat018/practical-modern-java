@@ -1,4 +1,4 @@
-package com.example;
+package com.example.interface_class;
 
 public class KoreaHouseAddress implements HouseAddress{
 

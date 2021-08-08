@@ -1,4 +1,4 @@
-package com.example;
+package com.example.interface_class;
 
 public interface HouseAddress {
     public static final String DefaultCountry = "Korea";
