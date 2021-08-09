@@ -1,6 +1,6 @@
 package com.example.functional_programming;
 
-public class TravleInfo {
+public class TravelInfo {
     private String name;
     private String country;
     private String city;

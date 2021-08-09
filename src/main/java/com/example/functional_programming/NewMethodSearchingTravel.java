@@ -10,7 +10,7 @@ public class NewMethodSearchingTravel {
     public static final String COUNTRY_TAILAND = "tailand";
 
     // 여행 상품 저장
-    private List<TravleInfo> travleInfoList = new ArrayList<>();
+    private List<TravelInfo> travelInfoList = new ArrayList<>();
 
     public NewMethodSearchingTravel() {
         initializeProduct();
@@ -18,54 +18,54 @@ public class NewMethodSearchingTravel {
 
     // 데이터를 초기화하여 외부에서 호출하지 못하도록 private으로 선언
     private void initializeProduct() {
-        TravleInfo cebu = new TravleInfo();
+        TravelInfo cebu = new TravelInfo();
         cebu.setName("Cebu Travel");
         cebu.setCountry(COUNTRY_PHILLIPHINE);
         cebu.setCity("cebu");
         cebu.setDays(5);
         cebu.setNights(3);
-        travleInfoList.add(cebu);
+        travelInfoList.add(cebu);
 
-        TravleInfo boracay = new TravleInfo();
+        TravelInfo boracay = new TravelInfo();
         boracay.setName("Boracay Travel");
         boracay.setCountry(COUNTRY_PHILLIPHINE);
         boracay.setCity("boracay");
         boracay.setDays(5);
         boracay.setNights(3);
-        travleInfoList.add(boracay);
+        travelInfoList.add(boracay);
 
-        TravleInfo hanoi = new TravleInfo();
+        TravelInfo hanoi = new TravelInfo();
         hanoi.setName("Hanoi Travel");
         hanoi.setCountry(COUNTRY_VIETNAM);
         hanoi.setCity("hanoi");
         hanoi.setDays(3);
         hanoi.setNights(2);
-        travleInfoList.add(hanoi);
+        travelInfoList.add(hanoi);
 
-        TravleInfo danang = new TravleInfo();
+        TravelInfo danang = new TravelInfo();
         danang.setName("Danang Travel");
         danang.setCountry(COUNTRY_VIETNAM);
         danang.setCity("danang");
         danang.setDays(6);
         danang.setNights(4);
-        travleInfoList.add(danang);
+        travelInfoList.add(danang);
 
-        TravleInfo bankok = new TravleInfo();
+        TravelInfo bankok = new TravelInfo();
         bankok.setName("Bankok Travel");
         bankok.setCountry(COUNTRY_TAILAND);
         bankok.setCity("bankok");
         bankok.setDays(5);
         bankok.setNights(3);
-        travleInfoList.add(bankok);
+        travelInfoList.add(bankok);
     }
 
     // 국가 정보에 기반해서 여행 상품을 조회한다.
-    public List<TravleInfo> searchTravelInfoByCountry(String country) {
-        List<TravleInfo> returnValue = new ArrayList<>();
+    public List<TravelInfo> searchTravelInfoByCountry(String country) {
+        List<TravelInfo> returnValue = new ArrayList<>();
 
-        for(TravleInfo travleInfo : travleInfoList) {
-            if(country.equals(travleInfo.getCountry())) {
-                returnValue.add(travleInfo);
+        for(TravelInfo travelInfo : travelInfoList) {
+            if(country.equals(travelInfo.getCountry())) {
+                returnValue.add(travelInfo);
             }
         }
 
@@ -73,12 +73,12 @@ public class NewMethodSearchingTravel {
     }
 
     // 도시 정보에 기반해서 여행 상품을 조회한다.
-    public List<TravleInfo> searchTravelInfoByCity(String city) {
-        List<TravleInfo> returnValue = new ArrayList<>();
+    public List<TravelInfo> searchTravelInfoByCity(String city) {
+        List<TravelInfo> returnValue = new ArrayList<>();
 
-        for(TravleInfo travleInfo : travleInfoList) {
-            if(city.equals(travleInfo.getCity())) {
-                returnValue.add(travleInfo);
+        for(TravelInfo travelInfo : travelInfoList) {
+            if(city.equals(travelInfo.getCity())) {
+                returnValue.add(travelInfo);
             }
         }
 

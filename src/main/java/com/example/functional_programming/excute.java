@@ -1,7 +1,5 @@
 package com.example.functional_programming;
 
-import com.example.interface_class.Worker;
-
 import java.util.List;
 
 public class excute {
@@ -31,7 +29,7 @@ public class excute {
 //            System.out.println(searchTravel);
 //        }
 
-        NewSearchingTravel travelSearch = new NewSearchingTravel();
+//        NewMethodSearchingTravelel travelSearch = new NewSearchingTravel();
 
 //        // 조회 조건을 외부로 분리
 //        List<TravleInfo> searchTravel = travelSearch.searchTravelInfo(new TravelInfoFilter() {
@@ -50,20 +48,28 @@ public class excute {
 //            System.out.println(travleInfo);
 //        }
 
-        // 국가명을 기준으로 조회하는 예제
-        List<TravleInfo> searchListByCountry =
-                travelSearch.searchTravelInfo((TravleInfo travleInfo) -> travleInfo.getCountry().equals("vietnam"));
-        for(TravleInfo travleInfo : searchListByCountry) {
+//        // 국가명을 기준으로 조회하는 예제
+//        List<TravleInfo> searchListByCountry =
+//                travelSearch.searchTravelInfo((TravleInfo travleInfo) -> travleInfo.getCountry().equals("vietnam"));
+//        for(TravleInfo travleInfo : searchListByCountry) {
+//            System.out.println(travleInfo);
+//        }
+//
+//        // 도시명을 기준으로 조회하는 예제
+//        List<TravleInfo> searchListByCity =
+//                travelSearch.searchTravelInfo((TravleInfo travleInfo) -> travleInfo.getCity().equals("hanoi"));
+//        for(TravleInfo travleInfo : searchListByCity) {
+//            System.out.println(travleInfo);
+//        }
+
+
+        FunctionSearchingTravel travelSearch = new FunctionSearchingTravel();
+        // 외부에서 정의한 메서드를 참조로 전달
+        List<TravelInfo> searchTravel = travelSearch.searchTravelInfo(FunctionSearchingTravel::isVietnam);
+
+        for(TravelInfo travleInfo : searchTravel) {
             System.out.println(travleInfo);
         }
-
-        // 도시명을 기준으로 조회하는 예제
-        List<TravleInfo> searchListByCity =
-                travelSearch.searchTravelInfo((TravleInfo travleInfo) -> travleInfo.getCity().equals("hanoi"));
-        for(TravleInfo travleInfo : searchListByCity) {
-            System.out.println(travleInfo);
-        }
-
 
     }
 }
