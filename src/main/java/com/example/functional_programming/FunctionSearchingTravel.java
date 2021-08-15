@@ -3,7 +3,7 @@ package com.example.functional_programming;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchingTravel {
+public class FunctionSearchingTravel {
 
     public static final String COUNTRY_VIETNAM = "vietnam";
     public static final String COUNTRY_PHILLIPHINE = "philliphine";
@@ -12,7 +12,7 @@ public class SearchingTravel {
     // 여행 상품 저장
     private List<TravelInfo> travelInfoList = new ArrayList<>();
 
-    public SearchingTravel() {
+    public FunctionSearchingTravel() {
         initializeProduct();
     }
 
@@ -59,16 +59,26 @@ public class SearchingTravel {
         travelInfoList.add(bankok);
     }
 
-    // 국가 정보에 기반해서 여행 상품을 조회한다.
-    public List<TravelInfo> searchTravelInfo(String country) {
+    // 외부에서 전달된 조건으로 검색
+    public List<TravelInfo> searchTravelInfo(TravelInfoFilter searchCondition) {
         List<TravelInfo> returnValue = new ArrayList<>();
 
         for(TravelInfo travelInfo : travelInfoList) {
-            if(country.equals(travelInfo.getCountry())) {
+            // 인터페이스의 isMatched 메서드를 호출. 실제 구현에 대해서는 캡슐화되어 있다.
+            if(searchCondition.isMatched(travelInfo)) {
                 returnValue.add(travelInfo);
             }
         }
 
         return returnValue;
     }
+
+    public static boolean isVietnam(TravelInfo travelInfo) {
+        if(travelInfo.getCountry().equals("vietnam")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
