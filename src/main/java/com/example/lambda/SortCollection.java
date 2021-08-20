@@ -12,12 +12,17 @@ public class SortCollection {
 
         // 정렬을 위한 규칙을 정의한다.
         // 자바 8 이상에서만 컴파일된다.
-        list.sort(new Comparator<BaseballPlayer>() {
+//        list.sort(new Comparator<BaseballPlayer>() {
+//
+//            @Override
+//            public int compare(BaseballPlayer o1, BaseballPlayer o2) {
+//                return o1.getPlayerName().compareTo(o2.getPlayerName());
+//            }
+//        });
 
-            @Override
-            public int compare(BaseballPlayer o1, BaseballPlayer o2) {
-                return o1.getPlayerName().compareTo(o2.getPlayerName());
-            }
-        });
+        list.sort(
+                (BaseballPlayer object1, BaseballPlayer object2)
+                -> object1.getPlayerName().compareTo(object2.getPlayerName())
+        );
     }
 }
