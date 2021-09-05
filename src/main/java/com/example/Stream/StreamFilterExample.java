@@ -14,12 +14,15 @@ public class StreamFilterExample {
         Stream<TravelInfo> travelStream = travelList.stream();
 
         // 필터 조건을 정의한다.
-        travelStream.filter(new Predicate<TravelInfo>() {
-            @Override
-            public boolean test(TravelInfo t) {
-                return TravelInfoDAO.COUNTRY_PHILLIPHINE.equals(t.getCountry());
-            }
-        }).forEach(System.out::println);
+//        travelStream.filter(new Predicate<TravelInfo>() {
+//            @Override
+//            public boolean test(TravelInfo t) {
+//                return TravelInfoDAO.COUNTRY_PHILLIPHINE.equals(t.getCountry());
+//            }
+//        }).forEach(System.out::println);
+
+        travelStream.filter((TravelInfo t) -> TravelInfoDAO.COUNTRY_PHILLIPHINE.equals(t.getCountry()))
+                .forEach(System.out::println);
 
     }
 }
