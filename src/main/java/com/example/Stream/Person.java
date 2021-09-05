@@ -1,6 +1,6 @@
 package com.example.Stream;
 
-public class Person {
+public class Person implements Comparable<Person> {
     private String name;
     private int age;
 
@@ -56,5 +56,11 @@ public class Person {
     @Override
     public int hashCode() {
         return (name + age).hashCode();
+    }
+
+    // 정렬을 위해 구현하였다.
+    @Override
+    public int compareTo(Person person) {
+        return (name + age).compareTo(person.getName() + person.getAge());
     }
 }

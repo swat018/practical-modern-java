@@ -10,7 +10,7 @@ import java.util.function.Predicate;
 
 public class StreamDistinctExample2 {
     public static <T> Predicate<T> distinctByKey(Function<? super T, ?> key) {
-        Map<Object, Boolean> seen = new ConcurrentHashMap<>();
+        Map<Object, Boolean                                      > seen = new ConcurrentHashMap<>();
         return t -> seen.putIfAbsent(key.apply(t), Boolean.TRUE) == null;
     }
 
