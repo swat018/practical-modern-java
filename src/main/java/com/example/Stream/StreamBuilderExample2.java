@@ -2,6 +2,9 @@ package com.example.Stream;
 
 import java.util.stream.Stream;
 
+/**
+ * @author jinwoopark
+ */
 public class StreamBuilderExample2 {
     // 스트림 빌더의 add 매서드 사용하는 예
     public static void main(String[] args) {
