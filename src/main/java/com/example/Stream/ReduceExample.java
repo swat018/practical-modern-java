@@ -13,7 +13,11 @@ public class ReduceExample {
         System.out.printf("IntStream 이용 sum : %s \n", intStreamSum);
 
         // 스트림의 collect 연산을 이용
-        int sum2 = intList.stream().mapToInt(Integer::intValue).sum();
+        int sum2 = intList.stream().collect(Collectors.summingInt(Integer::intValue));
         System.out.printf("Stream.collect 이용 sum : %s \n", sum2);
+
+        // 메서드 참조로 정의
+        int sum3 = intList.stream().reduce(0, Integer::sum);
+        System.out.printf("Stream.reduce 이용 sum : %s \n", sum3);
     }
 }
