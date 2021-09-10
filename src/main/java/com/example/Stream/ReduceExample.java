@@ -19,5 +19,9 @@ public class ReduceExample {
         // 메서드 참조로 정의
         int sum3 = intList.stream().reduce(0, Integer::sum);
         System.out.printf("Stream.reduce 이용 sum : %s \n", sum3);
+
+        // 람다 표현식으로 정의
+        int sum4 = intList.stream().reduce(0, (x,y) -> x + y);
+        System.out.printf("Stream.reduce 이용 sum (람다 표현식) : %s \n", sum4);
     }
 }
