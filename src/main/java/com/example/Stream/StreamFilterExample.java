@@ -1,10 +1,9 @@
 package com.example.Stream;
 
-import com.example.functional_programming.TravelInfoDAO;
-import com.example.functional_programming.TravelInfo;
+import com.example.Functional_programming.TravelInfoDAO;
+import com.example.Functional_programming.TravelInfo;
 
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class StreamFilterExample {
