@@ -22,7 +22,7 @@ public class SpliteratorExample2 {
         Spliterator<HelloPerson> spliterator1 = personList.spliterator();
 
         printSize("spliterator1", spliterator1);
-        // splitertor1을 분할한다.
+        // spliterator1을 분할한다.
         Spliterator<HelloPerson> spliterator2 = spliterator1.trySplit();
 
         System.out.println("첫 번째 split 후");
