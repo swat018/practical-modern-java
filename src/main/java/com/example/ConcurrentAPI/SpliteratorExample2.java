@@ -2,7 +2,6 @@ package com.example.ConcurrentAPI;
 
 import java.util.List;
 import java.util.Spliterator;
-import java.util.Spliterators;
 
 public class SpliteratorExample2 {
     // Splierator에 포함된 데이터의 개수를 예측한다.

@@ -50,8 +50,8 @@ public class HelloPerson {
         // 테스트 데이터를 추가한다.
         person.add(new HelloPerson("진우", "박", "대한민국"));
         person.add(new HelloPerson("혜빈", "유", "미국"));
-        person.add(new HelloPerson("현지", "박", "영국"));
-        person.add(new HelloPerson("서진", "박", "캐나다"));
+        person.add(new HelloPerson("현지", "박", "중국"));
+        person.add(new HelloPerson("서진", "박", "일본"));
         person.add(new HelloPerson("태양", "박", "남극"));
 
         return person;
