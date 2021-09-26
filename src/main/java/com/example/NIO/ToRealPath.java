@@ -1,6 +1,7 @@
 package com.example.NIO;
 
 import java.io.IOException;
+import java.nio.file.LinkOption;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -13,7 +14,8 @@ public class ToRealPath {
             print(path);
 
             // 심볼릭 링크 경로로 객체 생성
-            path = Paths.get("/Users/jinwoopark/git");
+//            path = Paths.get("/Users/jinwoopark/git");
+            path = Paths.get("/Users/jinwoopark/git").toRealPath(LinkOption.NOFOLLOW_LINKS);
             print(path);
 
         } catch(IOException e) {
