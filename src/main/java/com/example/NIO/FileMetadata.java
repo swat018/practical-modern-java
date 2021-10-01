@@ -24,9 +24,6 @@ public class FileMetadata {
                 // 기본 파일 속성
                 BasicFileAttributes attr = Files.readAttributes(file, BasicFileAttributes.class);
 
-                System.out.println("creationTime: " + attr.creationTime());
-                System.out.println("lassAccessTime: " + attr.lastAccessTime());
-                System.out.println("lastModifiedTime: " + attr.lastModifiedTime());
 
                 System.out.println("isDirectory: " + attr.isDirectory());
                 System.out.println("isOther: " + attr.isOther());
