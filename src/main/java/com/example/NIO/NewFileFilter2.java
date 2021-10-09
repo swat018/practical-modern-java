@@ -11,12 +11,7 @@ public class NewFileFilter2 {
         Path dir = Paths.get("/Users/jinwoopark/Desktop/git/practical-modern-java");
 
         // 필터를 정의한다.
-        DirectoryStream.Filter<Path> filter = new DirectoryStream.Filter<Path>() {
-            @Override
-            public boolean accept(Path file) throws IOException {
-                return (Files.isDirectory(file));
-            }
-        };
+        DirectoryStream.Filter<Path> filter = file -> (Files.isDirectory(file));
 
         // DirectoryStream.Filter를 기준으로 목록을 조회한다.
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir, filter)) {
