@@ -13,7 +13,8 @@ public class LocalDateExample {
         // 현재 날짜 객체를 생성
         LocalDate today = LocalDate.now();
         // 과거 날짜 객체를 생성
-        LocalDate birthday = LocalDate.of(2019, Month.JANUARY, 1);
+//        LocalDate birthday = LocalDate.of(2019, Month.JANUARY, 1);
+        LocalDate birthday = LocalDate.of(2019, Month.of(1), 1);
         // 과거 날짜 객체 정보를 수정
         LocalDate nextBDay = birthday.withYear(today.getYear());
 
