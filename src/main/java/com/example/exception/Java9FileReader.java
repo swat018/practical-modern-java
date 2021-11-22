@@ -1,6 +1,7 @@
 package com.example.exception;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -11,7 +12,7 @@ import java.io.IOException;
 public class Java9FileReader {
     private static final String FILENAME = "/Users/jinwoopark/Desktop/git/practical-modern-java/test/filename.txt";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         // 외부에쇼ㅓ 생성하였다.
         BufferedReader br = new BufferedReader(new FileReader(FILENAME));
 
