@@ -1,7 +1,6 @@
 package com.example.exception;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -27,5 +26,4 @@ public class Java9FileReader {
             e.printStackTrace();
         }
     }
-
 }
