@@ -13,7 +13,7 @@ public class Java9FileReader {
     private static final String FILENAME = "/Users/jinwoopark/Desktop/git/practical-modern-java/test/filename.txt";
 
     public static void main(String[] args) throws Exception {
-        // 외부에쇼ㅓ 생성하였다.
+        // 외부에서 생성하였다.
         BufferedReader br = new BufferedReader(new FileReader(FILENAME));
 
         // resource 구문 안에 변수를 지정하였다.
