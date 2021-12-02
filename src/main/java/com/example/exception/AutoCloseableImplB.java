@@ -10,6 +10,8 @@ public class AutoCloseableImplB implements AutoCloseable{
     @Override
     public void close() throws Exception {
         System.out.println(this.getClass().getName() + "는 종료되었습니다.");
+        // AutocloseableImpl A도 종료 처리한다.
+        a.close();
     }
 
     public static void main(String[] args) {
