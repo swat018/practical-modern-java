@@ -24,7 +24,7 @@ public class AutoCloseableImplB implements AutoCloseable{
 
         // 2번 실행 결과
         try (AutoCloseableImplA a = new AutoCloseableImplA();
-                AutoCloseableImplB b = new AutoCloseableImplB(a);) {
+             AutoCloseableImplB b = new AutoCloseableImplB(a);) {
             System.out.println("try with resource 테스트 종료");
         } catch(Exception e) {
             e.printStackTrace();
