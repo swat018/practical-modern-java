@@ -13,11 +13,11 @@ public class FirstSubscriber<T> implements Flow.Subscriber<String> {
     private String subscriberName;
     private Flow.Subscription subscription;
 
-    private FirstSubscriber(String subscription, int maxRequest) {
+    public FirstSubscriber(String subscription, int maxRequest) {
         this.subscriberName = subscription;
         this.maxNumber = new AtomicInteger(maxRequest);
     }
-    .
+
     // 최초 Publisher에 등록되었을 때 호출되는 메서드
     @Override
     public void onSubscribe(Flow.Subscription subscription) {
