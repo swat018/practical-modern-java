@@ -2,6 +2,10 @@ package com.example.Optional;
 
 import java.util.Optional;
 
+/**
+ * Optional을 이용해서 수정한 예제
+ * @author jinwoopark
+ */
 public class OptionalHouse {
     // country 속성은 필수값임. Optional에 포함시키지 않음.
     private String country;
