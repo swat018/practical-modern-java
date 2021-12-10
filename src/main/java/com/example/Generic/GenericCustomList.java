@@ -7,14 +7,26 @@ import java.util.List;
  * E로 오는 데이터 타입에 대해서만 사용할 수 있도록 제한하였다.
  * @author jinwoopark
  */
-public class GenericCustomList<E> {
-    private List<E> list = new ArrayList<>();
+//public class GenericCustomList<E> {
+//    private List<E> list = new ArrayList<>();
+//
+//    public void add(E element) {
+//        list.add(element);
+//    }
+//
+//    public E get (int index) {
+//        return list.get(index);
+//    }
+//}f
 
-    public void add(E element) {
+public class GenericCustomList<String> {
+    private List<String> list = new ArrayList<>();
+
+    public void add(String element) {
         list.add(element);
     }
 
-    public E get (int index) {
+    public String get (int index) {
         return list.get(index);
     }
 }
