@@ -17,8 +17,11 @@ import java.util.List;
 //    public E get (int index) {
 //        return list.get(index);
 //    }
-//}f
-
+//}
+/**
+ * String 클래스만을 허용하는 제네릭 선언 예제
+ * @author jinwoopark
+ */
 public class GenericCustomList<String> {
     private List<String> list = new ArrayList<>();
 
