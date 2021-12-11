@@ -17,7 +17,11 @@ public class GenericExample {
 
         // instanceof로 인스턴스 타입 확인
         System.out.println(myList instanceof ArrayList);
-        System.out.println(stringList instanceof ArrayList<String>);    // 에러
-        System.out.println(integerList instanceof ArrayList<Integer>);    // 에러
+//        System.out.println(stringList instanceof ArrayList<String>);    // 에러
+//        System.out.println(integerList instanceof ArrayList<Integer>);    // 에러
+//        System.out.println(stringList instanceof ArrayList);
+//        System.out.println(integerList instanceof ArrayList);
+        System.out.println(stringList instanceof ArrayList<?>);
+        System.out.println(integerList instanceof ArrayList<?>);
     }
 }
